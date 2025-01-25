@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тапалка с подсчётом</title>
+    <style>
+        .tap-area {
+            width: 300px;
+            height: 150px;
+            background-color: #e74c3c;
+            color: white;
+            font-size: 28px;
+            text-align: center;
+            line-height: 150px;
+            border-radius: 15px;
+            user-select: none; /* Запрет выделения текста */
+        }
+        .tap-area:active {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tap-area" id="tapArea">
+        Тапни: <span id="counter">0</span>
+    </div>
+
+    <script>
+        let count = 0;
+        document.getElementById("tapArea").addEventListener("click", function() {
+            count++;
+            document.getElementById("counter").textContent = count;
+        });
+    </script>
+
+</body>
+</html>
